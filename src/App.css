@@ -80,6 +80,10 @@ body {
 }
 
 .menu-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   display: none;
   background: none;
   border: none;
@@ -90,7 +94,9 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-
+  .navbar {
+    padding: 30px 1px;
+  }
   .menu-btn {
     display: block;
   }
@@ -98,7 +104,7 @@ body {
   .nav-menu {
     position: absolute;
     display: flex;
-    top: 75px;
+    top: 50px;
     width: 100%;
     flex-direction: column;
     justify-content: center;
