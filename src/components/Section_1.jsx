@@ -1,15 +1,15 @@
-import logo from '../assets/Gray and Black Minimalist Company Logo/2.svg';
+import logo from '../assets/Logos/2.svg';
 
 function Section_1() {
     return(
         <div>
-            <div>
+            <div className='Hero-Title'>
                 <h2>Juan David Gil</h2>
             </  div>
-            <img
+            {/* <img
             src={logo}
             alt='logo'
-            />
+            /> */}
             <div>
                <p> 
                     Desarrollador full stack que construye productos 
