@@ -1,3 +1,5 @@
+/* Tailwild */
+@import "tailwindcss";
 :root {
   --primary-color: #fff5e0;
   --secondary-color: #fff9ee;
