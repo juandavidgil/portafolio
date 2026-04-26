@@ -1,11 +1,13 @@
-function Footer() {
+import "../App.css";
+
+export default function Footer() {
     return(
         <div>
-            <button>
-                saber más
+            <button className="button">
+                <p>
+                ddd
+                </p>
             </button>
         </div>
     );
 };
-
-export default Footer;
