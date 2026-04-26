@@ -28,6 +28,8 @@ body {
     color: var(--text-color);
     font-family: var(--font-family-primary);
 }
+
+/* Barra de navegacion */
 .navbar {
   position: fixed;
   top: 0;
@@ -131,4 +133,34 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+/* Componenentes Reutilizables */
+/* Title */
+.Title {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    font-family: var(--font-family-secondary);
+    text-transform: uppercase;
+}
+/* Botones */
+/* Cards */
+.card {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 16px;
+    padding: 24px;
+    color: var(--primary-color);
+    font-family: var(--font-family-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+.card img {
+    width: 80px;
+    object-fit: cover;
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
