@@ -137,7 +137,6 @@ body {
 /* Componenentes Reutilizables */
 /* Title */
 .Title {
-    font-size: 3rem;
     font-weight: 400;
     color: var(--primary-color);
     font-family: var(--font-family-secondary);
@@ -146,21 +145,28 @@ body {
 /* Botones */
 /* Cards */
 .card {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.02);
     border-radius: 16px;
     padding: 24px;
     color: var(--primary-color);
     font-family: var(--font-family-primary);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
+    border: 1px solid var(--primary-color);
+    background: #fafafa10;
+    backdrop-filter: blur(0.4rem);
+      -webkit-backdrop-filter: blur(0.4rem);
+      transition: 0.3s ease;
+
 }
 .card img {
-    width: 80px;
+    width: 15%;
     object-fit: cover;
 }
 .card-content {
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+/* Projects */
+.projects {
+    padding: 2%;
 }

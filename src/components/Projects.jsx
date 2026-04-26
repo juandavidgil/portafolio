@@ -7,7 +7,7 @@ function Projects() {
     return (
         <div className="projects">
                 {/* <ArcPattern /> */}
-                <Title text="Proyectos" />
+                <Title text="Proyectos" size="5rem"  />
                 <Cards title="Proyecto 1" description="Descripción del proyecto 1" image={image_1} />
         </div>
     );
