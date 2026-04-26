@@ -1,9 +1,9 @@
 
 import '../../App.css'
 
-function Title({ text,size = "3rem",color = "#fff5e0",}) {
+function Title({ text,color = "#fff5e0",}) {
     return (
-        <h1 className="Title" style={{ fontSize: size, color: color,  }}>
+        <h1 className="Title" style={{ color: color  }}>
         {text}
         </h1>
     );

@@ -4,12 +4,12 @@ function Navbar() {
     return (
         <>
         <nav className="navbar">
-            <ul className="navbar-list">
-                <li className="navbar-item"><a href="#home">Sobre Mi</a></li>
-                <li className="navbar-item"><a href="#about">Proyectos</a></li>
-                <li className="navbar-item"><a href="#projects">Inicio</a></li>
-                <li className="navbar-item"><a href="#contact">Habilidades</a></li>
-                <li className="navbar-item"><a href="#contact">Contacto</a></li>
+            <ul className="nav-menu">
+                <a href="#home">Sobre Mi</a>
+                <a href="#about">Proyectos</a>
+                <a href="#projects">Inicio</a>
+                <a href="#contact">Habilidades</a>
+                <a href="#contact">Contacto</a>
             </ul>
         </nav>
 

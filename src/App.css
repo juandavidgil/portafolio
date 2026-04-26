@@ -1,32 +1,35 @@
-:root{
-    --primary-color: #fff5e0;
-    --secondary-color: #fff9ee;
-    --background-color: #0e0a05;
-    --terciary-color: #5478FF;
-    --text-color: #fff5e0;
-    --font-family-primary: 'Poppins', sans-serif;
-    --font-family-secondary: 'Neue Montreal', sans-serif;
+:root {
+  --primary-color: #fff5e0;
+  --secondary-color: #fff9ee;
+  --background-color: #0e0a05;
+  --terciary-color: #5478FF;
+  --text-color: #fff5e0;
+  --font-family-primary: 'Poppins', sans-serif;
+  --font-family-secondary: 'Neue Montreal', sans-serif;
+  --scw-transition-speed: 0.3s;
+  --scw-hover-scale: 1.02;
 
 }
+
 /* Fuentes */
 @font-face {
-    font-family: 'Neue Montreal';
-    src: url('/src/assets/fonts/NeueMontreal-Regular.woff2') format('woff2');
-    font-weight: 400;
+  font-family: 'Neue Montreal';
+  src: url('/src/assets/fonts/NeueMontreal-Regular.woff2') format('woff2');
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Neue Montreal';
-    src: url('/src/assets/fonts/NeueMontreal-Bold.woff2') format('woff2');
-    font-weight: 700;
+  font-family: 'Neue Montreal';
+  src: url('/src/assets/fonts/NeueMontreal-Bold.woff2') format('woff2');
+  font-weight: 700;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: var(--font-family-primary);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family-primary);
 }
 
 /* Barra de navegacion */
@@ -91,14 +94,198 @@ body {
   border: none;
   color: white;
   cursor: pointer;
-  
+
 }
 
-/* Responsive */
+/* Componenentes Reutilizables */
+/* Title */
+.Title {
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--primary-color);
+  font-family: var(--font-family-secondary);
+  text-transform: uppercase;
+}
+
+/* Botones */
+/* Cards */
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Imagen fondo */
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .3s ease-in-out;
+}
+
+/* Overlay con blur */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.3);
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.card-overlay.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* contenido interno */
+.card-content {
+  padding: 20px;
+  color: white;
+}
+
+.card-content h3 {
+  margin: 0 0 10px;
+}
+
+.card-content p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* TEXTO */
+.card-content h3 {
+  margin: 0 0 10px 0;
+}
+
+.card-content p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* HOVER */
+.card:hover .card-content {
+  transform: translateX(0);
+}
+
+.card:hover .card-img {
+  transform: scale(1.1);
+}
+
+/* Projects */
+/*  */
+
+/* ── Wrapper ── */
+.scw-wrapper {
+  position: absolute;
+  display: inline-block;
+  background: var(--background-color);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: default;
+  transition: transform var(--scw-transition-speed) ease,
+              box-shadow var(--scw-transition-speed) ease;
+  transform: rotateX(180deg); 
+  z-index: -1;  
+  top: 0;
+  right: 2rem;        
+}
+
+/* ── Modo interactivo ── */
+.scw-wrapper.scw-interactive {
+  cursor: pointer;
+}
+
+/* ── Estado hover ── */
+.scw-wrapper.scw-hovered {
+  transform: scale(var(--scw-hover-scale));
+  transform: rotateX(180deg);  
+}
+/* ── SVG ── */
+.scw-svg {
+  display: block;
+}
+.projects {
+  position: relative;
+  padding: 2%;
+  overflow: hidden;
+}
+/* Contenedor de cards */
+
+.Cards-container {
+
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
 @media (max-width: 768px) {
+
+  .projects {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .Title{
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+  }
+  .Cards-container {
+    margin: 0;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+    .scw-wrapper {
+    position: relative;
+    width: 100%;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+    .card {
+    height: 300px;
+  }
+
+  .card-overlay {
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    top: auto;
+
+    transform: translateY(100%);
+  }
+
+  .card-overlay.show {
+    transform: translateY(0);
+  }
   .navbar {
     padding: 30px 1px;
   }
+
   .menu-btn {
     display: block;
   }
@@ -129,44 +316,11 @@ body {
     opacity: 0;
     transform: translateY(-12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
-/* Componenentes Reutilizables */
-/* Title */
-.Title {
-    font-weight: 400;
-    color: var(--primary-color);
-    font-family: var(--font-family-secondary);
-    text-transform: uppercase;
-}
-/* Botones */
-/* Cards */
-.card {
-    border-radius: 16px;
-    padding: 24px;
-    color: var(--primary-color);
-    font-family: var(--font-family-primary);
-    display: flex;
-    border: 1px solid var(--primary-color);
-    background: #fafafa10;
-    backdrop-filter: blur(0.4rem);
-      -webkit-backdrop-filter: blur(0.4rem);
-      transition: 0.3s ease;
 
-}
-.card img {
-    width: 15%;
-    object-fit: cover;
-}
-.card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-/* Projects */
-.projects {
-    padding: 2%;
+
 }
