@@ -1,8 +1,8 @@
-import ArcPattern from "./ArcPattern";
-import Title from "./Titulos/Title";
-import Cards from "./Cards/Cards";
+import ArcPattern from "../Components/ArcPattern";
+import Title from "../Components/Titulos/Title";
+import Cards from "../Components/Cards/Cards";
 import image_1 from "../assets/images/pexels-technobulka-4842544.jpg";
-
+import './css/Projects.css';
 function Projects() {
     return (
         <div className="projects">

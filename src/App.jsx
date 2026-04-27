@@ -1,9 +1,8 @@
 import './App.css';
 
-import Section_1 from './components/Section_1';
-import footer  from './components/Footer';
-import Navbar from './components/Navbar'
-import Projects from './components/Projects';
+import Navbar from './Pages/Navbar'
+import About_me from './Pages/About_Me';
+import Projects from './Pages/Projects';
 
 import './App.css'
 // Fuentes
@@ -17,11 +16,9 @@ function App() {
 
   return (
     <>
-      {/* <Navbar/> */}
-      {/* <Section_1 /> */}
+      <Navbar />
+      <About_me />
       <Projects />
-      <footer />
-
     </>
   )
 }
